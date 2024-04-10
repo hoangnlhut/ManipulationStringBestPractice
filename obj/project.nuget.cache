@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "YEyPB7FZcER671vvG0FDwWfL23awjokiveFOb1NgF8Zawxim7VH6BNDPlBGId2NZUtCQq15t3+NEmiR8+JiqBg==",
+  "success": true,
+  "projectFilePath": "E:\\LEARNING\\SELF_TRAINING_FOLDER\\AllCSharpKnowledge_PLURALSIGHT\\ManipulationStringBestPractice\\StringManipulationDemos.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Hoang\\.nuget\\packages\\microsoft.extensions.objectpool\\5.0.4\\microsoft.extensions.objectpool.5.0.4.nupkg.sha512"
+  ],
+  "logs": []
+}
