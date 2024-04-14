@@ -16,12 +16,12 @@ namespace StringManipulationDemos
                 {"Michael Schumacher", new TimeSpan(0, 0, 1, 27, 707)}
             };
             
-            Console.WriteLine("TODO");
+            Console.WriteLine("{0,-20}{1,10}", "Driver", "Lap Time");
             Console.WriteLine();
 
             foreach (var result in qualifyingTimes)
             {
-                Console.WriteLine("TODO");
+                Console.WriteLine("{0,-20}{1,10:mm\\:ss\\.fff}", result.Key, result.Value);
             }
 
             Console.WriteLine();

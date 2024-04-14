@@ -22,9 +22,9 @@ namespace StringManipulationDemos
             {
                 Console.WriteLine(entry);
 
-                // TODO
+                var entrySpan = entry.AsSpan(); // create a read-only span over the string's memory.
 
-                var isValid = false;
+                var isValid = entrySpan.Slice(0, makeSpan.Length).SequenceEqual(makeSpan);
                 Console.WriteLine(isValid ? "VALID" : "INVALID");
                 
                 Console.WriteLine();

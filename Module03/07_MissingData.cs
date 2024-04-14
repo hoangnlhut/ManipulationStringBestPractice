@@ -20,8 +20,8 @@ namespace StringManipulationDemos
             Console.WriteLine(input.Equals(string.Empty) ? "Input WAS empty" : "Input WAS NOT empty");
             Console.WriteLine(input == string.Empty ? "Input WAS empty" : "Input WAS NOT empty");
 
-            //Console.WriteLine(TODO ? "Input WAS null or empty" : "Input WAS NOT null or empty");
-            //Console.WriteLine(TODO ? "Input WAS null, empty or whitespace" : "Input WAS NOT null, empty or whitespace");
+            Console.WriteLine(string.IsNullOrEmpty(input) ? "Input WAS null or empty" : "Input WAS NOT null or empty");
+            Console.WriteLine(string.IsNullOrWhiteSpace(input) ? "Input WAS null, empty or whitespace" : "Input WAS NOT null, empty or whitespace");
 
             Console.WriteLine();
             Console.WriteLine("Press a key to continue");

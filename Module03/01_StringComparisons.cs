@@ -1,4 +1,5 @@
 using System;
+using System.Globalization;
 using System.Threading;
 
 namespace StringManipulationDemos
@@ -19,6 +20,16 @@ namespace StringManipulationDemos
             Console.WriteLine();
 
             // TODO - Comparisons
+            var comparison = helloOne.CompareTo(helloTwo);
+            Console.WriteLine(comparison);
+            comparison = helloTwo.CompareTo(helloOne);
+            Console.WriteLine(comparison);
+
+            comparison = string.CompareOrdinal(helloOne, helloTwo);
+            Console.WriteLine(comparison);
+            comparison = string.Compare(helloOne, helloTwo, StringComparison.OrdinalIgnoreCase);
+            Console.WriteLine(comparison);
+
 
             Console.WriteLine();
             Console.WriteLine("Press a key to continue");

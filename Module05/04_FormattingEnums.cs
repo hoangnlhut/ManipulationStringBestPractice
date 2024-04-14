@@ -12,12 +12,14 @@ namespace StringManipulationDemos
             
             var status = Status.Yellow;
             
-            Console.WriteLine("TODO");
+            Console.WriteLine(status.ToString());
+            Console.WriteLine(status.ToString("G")); //general form
+            Console.WriteLine(status.ToString("D")); 
             Console.WriteLine();
 
             Console.WriteLine();
             Console.WriteLine("Press a key to continue");
-            Console.ReadKey();
+            Console.ReadKey(); 
         }
     }
 }

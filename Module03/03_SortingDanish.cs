@@ -22,7 +22,8 @@ namespace StringManipulationDemos
             Console.WriteLine();
             Console.WriteLine();
 
-            // TODO - Comparer
+            var comparer = StringComparer.Create(new CultureInfo("da-DK"), CompareOptions.None);
+            strings = new SortedSet<string>(comparer) { "brug", "æbler" };
 
             Console.WriteLine(Thread.CurrentThread.CurrentCulture);
             foreach (var s in strings)
@@ -32,8 +33,8 @@ namespace StringManipulationDemos
             Console.WriteLine();
             Console.WriteLine();
 
-            // TODO - Culture
-
+            CultureInfo.CurrentCulture = new CultureInfo("da-DK");
+            strings = new SortedSet<string> { "brug", "æbler" };
             Console.WriteLine(Thread.CurrentThread.CurrentCulture);
             foreach (var s in strings)
             {

@@ -20,20 +20,20 @@ namespace StringManipulationDemos
             {
                 Console.WriteLine(entry);
 
-                var colonPosition = 0;
+                var colonPosition = entry.IndexOf(':', StringComparison.Ordinal);
                 Console.WriteLine("First colon: " + colonPosition);
 
-                var startAt = 0;
+                var startAt = colonPosition + 1;
                 colonPosition = entry.IndexOf(':', startAt, entry.Length - startAt);
                 Console.WriteLine("Next colon: " + colonPosition);
 
-                colonPosition = 0;
+                colonPosition = entry.LastIndexOf(':');
                 Console.WriteLine("Last colon: " + colonPosition);
 
-                var colonCommaPosition = 0;
+                var colonCommaPosition = entry.IndexOfAny(new[] { ',', ':' });
                 Console.WriteLine("Colon/comma: " + colonCommaPosition);
 
-                var modelPosition = 0;
+                var modelPosition = entry.IndexOf("model", StringComparison.OrdinalIgnoreCase);
                 Console.WriteLine("model: " + modelPosition);
 
                 Console.WriteLine();

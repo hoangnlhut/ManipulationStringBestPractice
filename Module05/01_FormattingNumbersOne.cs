@@ -24,7 +24,10 @@ namespace StringManipulationDemos
             foreach (var culture in cultures)
             {
                 Console.WriteLine(culture);
-                Console.WriteLine("TODO");
+                Console.WriteLine(price.ToString(culture));
+                Console.WriteLine(price.ToString("C" ,culture));
+                Console.WriteLine(price.ToString("F3" ,culture));
+                Console.WriteLine(price.ToString("N1" ,culture));
                 Console.WriteLine();
             }
 

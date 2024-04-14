@@ -16,7 +16,9 @@ namespace StringManipulationDemos
             Console.WriteLine(helloWorldLower);
             Console.WriteLine();
 
-            // TODO - Equals
+            Console.WriteLine(helloWorld.Equals(helloWorldLower));
+            Console.WriteLine(helloWorld.Equals(helloWorldLower, StringComparison.Ordinal));
+            Console.WriteLine(helloWorld.Equals(helloWorldLower, StringComparison.OrdinalIgnoreCase));
 
             Console.WriteLine();
             Console.WriteLine("Press a key to continue");

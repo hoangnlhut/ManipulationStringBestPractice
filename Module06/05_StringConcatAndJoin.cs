@@ -1,4 +1,5 @@
 using System;
+using System.Linq;
 
 namespace StringManipulationDemos
 {
@@ -18,13 +19,16 @@ namespace StringManipulationDemos
             }
 
             var finalSentence = string.Empty;
-            // TODO
+            foreach (var word in words)
+            {
+                finalSentence = finalSentence + word;
+            }
 
             Console.WriteLine(finalSentence);
             Console.WriteLine();
-            Console.WriteLine("TODO");
+            Console.WriteLine(string.Concat(words));
             Console.WriteLine();
-            Console.WriteLine("TODO");
+            Console.WriteLine(string.Join(' ', words));
             Console.WriteLine();
             
             Console.WriteLine("TODO");

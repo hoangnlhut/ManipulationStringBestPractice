@@ -19,17 +19,18 @@ namespace StringManipulationDemos
             foreach (var culture in cultures)
             {
                 Console.WriteLine(culture);
-                Console.WriteLine("TODO");
+                Console.WriteLine(percent.ToString("P",culture));
                 Console.WriteLine();
             }
             
-            Console.WriteLine("TODO");
+            Console.WriteLine(15988.ToString("D8"));
             Console.WriteLine();
 
             var temps = new [] {31.25, -5.1, 0.0};
             foreach (var temp in temps)
             {
-                Console.WriteLine("TODO");
+                // positive;negative;zero format
+                Console.WriteLine(temp.ToString("#.# 'degree Celsius';#.# 'degree below zero';'Freezing'"));
             }
 
             Console.WriteLine();

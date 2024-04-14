@@ -22,7 +22,7 @@ namespace StringManipulationDemos
             {
                 foreach (var culture in cultures)
                 {
-                    var formattedPrice = "TODO";
+                    var formattedPrice = string.Format(culture, "The price of the car is {0:C}", price);
                     Console.WriteLine(formattedPrice);
                 }
             }
@@ -33,7 +33,7 @@ namespace StringManipulationDemos
 
             foreach (var culture in cultures)
             {
-                Console.WriteLine("TODO");
+                Console.WriteLine(string.Format(culture,"At {0:d}, the temp is {1:F2}C", DateTime.Now, temperature ));
             }
 
             Console.WriteLine();

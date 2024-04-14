@@ -20,16 +20,16 @@ namespace StringManipulationDemos
             {
                 Console.WriteLine(entry);
 
-                var isFord = false; // TODO
+                var isFord = entry.Contains("Ford", StringComparison.Ordinal); // use default StringComparison mode and perform a case-sensitive ordinal comparison.  
                 Console.WriteLine(isFord ? "CONTAINS Ford" : "DOES NOT CONTAIN Ford");
 
-                isFord = false; // TODO
+                isFord = entry.Contains("Ford", StringComparison.OrdinalIgnoreCase);  // TODO
                 Console.WriteLine(isFord ? "CONTAINS Ford (Ignore case)" : "DOES NOT CONTAIN Ford (Ignore case)");
 
-                var isValid = false; // TODO
+                var isValid = entry.StartsWith("make", StringComparison.OrdinalIgnoreCase);
                 Console.WriteLine(isValid ? "IS valid" : "IS NOT valid");
 
-                var containsComma = false; // TODO
+                var containsComma = entry.Contains(',', StringComparison.Ordinal); // fastest choice here.
                 Console.WriteLine(containsComma ? "HAS comma" : "DOES NOT have comma");
 
                 Console.WriteLine();

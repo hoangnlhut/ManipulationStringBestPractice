@@ -10,7 +10,11 @@ namespace StringManipulationDemos
 
             var guid = Guid.NewGuid();
 
-            Console.WriteLine("TODO");
+            Console.WriteLine(guid.ToString());
+            Console.WriteLine(guid.ToString("D"));
+            Console.WriteLine(guid.ToString("N"));
+            Console.WriteLine(guid.ToString("B"));
+            Console.WriteLine(guid.ToString("P"));
             Console.WriteLine();
 
             Console.WriteLine();

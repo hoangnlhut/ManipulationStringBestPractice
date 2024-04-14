@@ -24,7 +24,11 @@ namespace StringManipulationDemos
             Console.WriteLine(footballThree);
             Console.WriteLine();
 
-            // TODO - Show equality of German strings
+            Console.WriteLine(footballOne.Equals(footballTwo));
+            Console.WriteLine(footballOne.Equals(footballTwo, StringComparison.CurrentCulture));
+            Console.WriteLine(footballOne.Equals(footballThree, StringComparison.CurrentCulture));
+
+
 
             CultureInfo.CurrentCulture = initialCulture; // return culture to original
             Console.WriteLine();

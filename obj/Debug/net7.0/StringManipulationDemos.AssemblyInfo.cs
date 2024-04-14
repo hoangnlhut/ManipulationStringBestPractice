@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("StringManipulationDemos")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+72f653eeb08a55c4efd3850c1655e3a66a888ffe")]
 [assembly: System.Reflection.AssemblyProductAttribute("StringManipulationDemos")]
 [assembly: System.Reflection.AssemblyTitleAttribute("StringManipulationDemos")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

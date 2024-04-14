@@ -18,13 +18,18 @@ namespace StringManipulationDemos
             };
 
             // TODO - Patterns
+            const string startsWithPattern = "^[A-Za-z]";
+            const string matchPattern = ": (\\w+),"; 
 
             foreach (var entry in data)
             {
                 Console.WriteLine(entry);
 
-                // TODO - Matches
+                var match = Regex.Match(entry, startsWithPattern);
+                Console.WriteLine(match.Success ? "STARTS with text" : "DOES NOT START with text");
 
+                match = Regex.Match(entry, matchPattern);
+                Console.WriteLine(match.Success ? "VALID" : "NOT VALID");
                 Console.WriteLine();
             }
 

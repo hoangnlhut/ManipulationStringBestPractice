@@ -13,7 +13,7 @@ namespace StringManipulationDemos
             Console.WriteLine("Provide a greeting >> ");
             var greeting = Console.ReadLine();
 
-            Console.WriteLine("TODO");
+            Console.WriteLine(original.Insert(original.IndexOf('!'), greeting));
 
             Console.WriteLine();
             Console.WriteLine("Press a key to continue");

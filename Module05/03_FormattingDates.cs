@@ -20,7 +20,12 @@ namespace StringManipulationDemos
             foreach (var culture in cultures)
             {
                 Console.WriteLine(culture);
-                Console.WriteLine("TODO");
+                Console.WriteLine(dateTime.ToString(culture));
+                Console.WriteLine(dateTime.ToString("d", culture));
+                Console.WriteLine(dateTime.ToString("D", culture));
+                Console.WriteLine(dateTime.ToString("F", culture));
+                Console.WriteLine(dateTime.ToString("o", culture));
+                Console.WriteLine(dateTime.ToString("dddd, d MMMM yyyy 'at' hh:mm tt", culture));
                 Console.WriteLine();
             }
             

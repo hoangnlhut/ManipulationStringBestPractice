@@ -15,6 +15,7 @@ namespace StringManipulationDemos
             Console.WriteLine();
 
             // TODO - Equality operator
+            Console.WriteLine(helloWorld == helloWorldLower ? "equal" : "not equal");
 
             Console.WriteLine();
             Console.WriteLine("Press a key to continue");

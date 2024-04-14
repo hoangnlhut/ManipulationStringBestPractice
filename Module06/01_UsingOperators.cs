@@ -16,7 +16,8 @@ namespace StringManipulationDemos
             Console.Write("What is your last name? ");
             var lastName = Console.ReadLine();
 
-            var finalWelcome = "TODO";
+            var finalWelcome =  welcome  + firstName + " " + lastName;
+            welcome += firstName + " " + lastName;
 
             Console.WriteLine(finalWelcome);
             Console.WriteLine(welcome);
