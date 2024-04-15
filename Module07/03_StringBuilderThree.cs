@@ -16,13 +16,16 @@ namespace StringManipulationDemos
             string a;
             while ((a = Console.ReadLine()) != "exit")
             {
-                // TODO
+                sb.Append(a).Append(',');
                 ResetWordScreen();
             }
-            // TODO
-            Console.WriteLine("TODO");
+            
+            sb.Remove(sb.Length - 1, 1);
+            sb.AppendLine();
+            sb.Append("Some more text!");
+            Console.WriteLine(sb.ToString());
 
-            // TODO
+            sb.Clear();
 
             var cultures = new[] {
                 new CultureInfo("en-US"),
@@ -34,7 +37,7 @@ namespace StringManipulationDemos
 
             foreach (var culture in cultures)
             {
-                // TODO
+                sb.AppendFormat(culture, "At {0:d}, the temp is {1:F2}", culture, temperature).AppendLine();
             }
 
             Console.WriteLine(sb.ToString());

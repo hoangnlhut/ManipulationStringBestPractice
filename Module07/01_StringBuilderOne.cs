@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Text;
 
 namespace StringManipulationDemos
 {
@@ -10,15 +11,17 @@ namespace StringManipulationDemos
             Console.Clear();
             
             var data = FakeApiCall();
+            StringBuilder stringBuilder = new StringBuilder();
 
             foreach (var sentence in data)
             {
                 // TODO
+                stringBuilder.AppendLine(sentence);
             }
 
             // TODO
 
-            Console.WriteLine("TODO");
+            Console.WriteLine(stringBuilder.ToString());
 
             Console.WriteLine();
             Console.WriteLine("Press a key to continue");

@@ -19,21 +19,22 @@ namespace StringManipulationDemos
                 keywords[i] = new string(Enumerable.Range(1, random.Next(5, 10)).Select(_ => chars[random.Next(chars.Length)]).ToArray());
             }
 
-            // TODO
-
+           var sb = new StringBuilder("This is a string builder with random words:");
+            sb.AppendLine();
+;
             foreach (var keyword in keywords)
             {
-                // TODO
+                sb.Append(keyword).Append(',');
             }
 
-            Console.Write("TODO");
+            Console.Write(sb.ToString());
             Console.WriteLine();
             Console.WriteLine();
 
-            // TODO
+            sb.Replace(',', '|');
+            sb.Insert(0, "Here 's a new sentence at the start!! ");
 
-            Console.Write("TODO");
-
+            Console.Write(sb.ToString());
             Console.WriteLine();
             Console.WriteLine("Press a key to continue");
             Console.ReadKey();

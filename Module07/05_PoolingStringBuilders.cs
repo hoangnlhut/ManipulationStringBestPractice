@@ -1,18 +1,33 @@
+using Microsoft.Extensions.ObjectPool;
 using System;
+using System.Text;
 
 namespace StringManipulationDemos
 {
     public partial class Module07
     {
-        // TODO
+       private static readonly ObjectPool<StringBuilder> Pool = new DefaultObjectPoolProvider().CreateStringBuilderPool();
 
         public static void PoolingStringBuilders()
         {
             Console.Clear();
 
-            // TODO
+            var sbPooled = Pool.Get();
 
-            Console.WriteLine("TODO");
+            try
+            {
+                Console.WriteLine(sbPooled.Append("Some text "));
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+            finally
+            {
+                Pool.Return(sbPooled);
+            }
+
 
             Console.WriteLine();
             Console.WriteLine("Press a key to continue");

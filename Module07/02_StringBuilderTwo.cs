@@ -11,34 +11,35 @@ namespace StringManipulationDemos
 
             const string myString = "This is a string. ";
             
-            // TODO
+            var sb = new StringBuilder(myString, myString.Length * 11);
             
             for (var i = 0; i < 10; i++)
             {
-                // TODO
+                sb.Append(myString);
             }
             
-            Console.WriteLine("TODO");
+            Console.WriteLine($"Current Length = {sb.Length}. Capacity = {sb.Capacity}.");
             
-            // TODO
+            sb.EnsureCapacity(myString.Length * 41);
 
             for (var i = 0; i < 30; i++)
             {
-                // TODO
+                sb.Append(myString);
             }
 
-            Console.WriteLine("TODO");
+            Console.WriteLine($"Current Length = {sb.Length}. Capacity = {sb.Capacity}.");
 
             Console.WriteLine();
             Console.WriteLine("Press any key to continue the demo...");
             Console.ReadKey();
 
-            // TODO
+            sb = new StringBuilder(256, 2048);
 
             for (var i = 0; i < 10000; i++)
             {
-                // TODO
+                sb.Append(myString);
             }
+            Console.WriteLine($"Current Length = {sb.Length}. Capacity = {sb.Capacity}.");
 
             Console.WriteLine();
             Console.WriteLine("Press a key to continue");
