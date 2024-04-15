@@ -18,7 +18,11 @@ namespace StringManipulationDemos
                                      "There is nothing surprising in this. If they but knew it, almost all men in their degree, some time or other, cherish very nearly the same " +
                                      "feelings towards the ocean with me.";
 
-            // TODO
+            var counter = 0;
+            foreach (var sentence in paragraph.Split('.', StringSplitOptions.RemoveEmptyEntries | StringSplitOptions.TrimEntries))
+            {
+                Console.WriteLine($"{counter++}: {sentence}.");
+            }
 
             Console.WriteLine();
             Console.WriteLine();
@@ -26,7 +30,10 @@ namespace StringManipulationDemos
             const string data =
                 "qjwBFBKVy;lFcnsLVb,EnaYhotlM,QOjlvEFne,ivSPaDLl,NhVxp,LQLPNLQye;TCTgjmXq,OIVKxdcH,yJuQutk,uYQbSwnh,BsFab,eJajp,NllEo,VnCHZ|vrzaLwLhd,ckCBWzQGT,vihmf,dvSuEtS,fkJEy,XHcXIAB,eVWwoPBM|MunSP,jmjStW,pLIpmnFK,";
 
-            // TODO
+            foreach (var item in data.Split(',', ';', '|'))
+            {
+                Console.WriteLine(item);
+            }
 
             Console.WriteLine();
             Console.WriteLine("Press a key to continue");

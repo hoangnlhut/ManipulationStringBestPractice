@@ -18,7 +18,14 @@ namespace StringManipulationDemos
 
             foreach (var data in carData)
             {
-               Console.WriteLine("TODO");
+                var colon = data.IndexOf(':', StringComparison.Ordinal);
+                var start = colon + 2;
+                var end = data[^1] == '.' ? data.Length - 1 : data.Length;
+                
+                if (data.Length > start) 
+                {
+                    Console.WriteLine(data.Substring(start, end - start));
+                }
             }
 
             Console.WriteLine();

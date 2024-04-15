@@ -1,4 +1,5 @@
 using System;
+using System.Text.RegularExpressions;
 
 namespace StringManipulationDemos
 {
@@ -15,15 +16,18 @@ namespace StringManipulationDemos
                 "0800 123 4567",
             };
 
-            // TODO
+            
+            const string ipPattern = "^([0-9]{1,3})\\.([0-9]{1,3})\\.([0-9]{1,3})\\.([0-9]{1,3})$";
 
             foreach (var entry in ipData)
             {
                 Console.WriteLine(entry);
 
-                // TODO
-
-                Console.WriteLine();
+                var parts = Regex.Split(entry, ipPattern);
+                foreach (var item in parts)
+                {
+                    Console.WriteLine(item);
+                }
             }
 
             Console.WriteLine();

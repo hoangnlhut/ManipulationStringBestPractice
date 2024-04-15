@@ -1,4 +1,5 @@
 using System;
+using System.Text.RegularExpressions;
 
 namespace StringManipulationDemos
 {
@@ -16,12 +17,13 @@ namespace StringManipulationDemos
                 "10.David Clarke"
             };
 
-            // TODO
+            //language=regex
+            const string regexPattern = "^[0-9]{1,2}\\. ?";
 
             foreach (var entry in data)
             {
                 Console.WriteLine(entry);
-                Console.WriteLine("TODO");
+                Console.WriteLine(Regex.Replace(entry, regexPattern, string.Empty));
                 Console.WriteLine();
             }
 

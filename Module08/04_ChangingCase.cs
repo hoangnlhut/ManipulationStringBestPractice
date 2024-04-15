@@ -1,4 +1,5 @@
 using System;
+using System.Globalization;
 
 namespace StringManipulationDemos
 {
@@ -10,23 +11,25 @@ namespace StringManipulationDemos
 
             const string name = "Steve Gordon";
 
-            var upper = "TODO";
+            //var upper = name.ToUpper(CultureInfo.InvariantCulture);
+            var upper = name.ToUpperInvariant();    
             Console.WriteLine(upper);
 
-            var lower = "TODO";
+            var lower = name.ToLowerInvariant();
             Console.WriteLine(lower);
 
             const char letterA = 'a';
-            Console.WriteLine("TODO");
+            Console.WriteLine(char.ToUpperInvariant(letterA));
             
             const string jsonName = "sports_car_manufacturer";
-            
-            var intermediateName = "TODO";
+
+            var textInfo = new CultureInfo("en-GB", false).TextInfo;
+            var intermediateName = textInfo.ToTitleCase(jsonName);
             Console.WriteLine(intermediateName.Replace("_", string.Empty));
             
             const string sentence = "This is a short sentence.";
             
-            Console.WriteLine("TODO");
+            Console.WriteLine(textInfo.ToTitleCase(sentence));
 
             Console.WriteLine();
             Console.WriteLine("Press a key to continue");

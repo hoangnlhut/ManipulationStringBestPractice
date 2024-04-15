@@ -10,25 +10,27 @@ namespace StringManipulationDemos
 
             const string someText = "   This is a string with whitespace        ";
 
-            var withoutWhitespace = "TODO";
+            var withoutWhitespace = someText.Trim();
             Console.WriteLine($"{withoutWhitespace}END");
 
-            withoutWhitespace = "TODO";
+            withoutWhitespace = someText.TrimStart();
             Console.WriteLine($"{withoutWhitespace}END");
 
-            withoutWhitespace = "TODO";
+            withoutWhitespace = someText.TrimEnd();
             Console.WriteLine($"{withoutWhitespace}END");
 
             const string codeComment = "/// This is a code comment ";
 
-            var trimmed = "TODO";
+            var charsToTrim = new[] { '/', ' ' };
+
+            var trimmed = codeComment.Trim(charsToTrim);
             Console.WriteLine(trimmed);
 
             var data = new[] {"Cat", "Dog", "House", "Centipede"};
 
             foreach (var item in data)
             {
-                Console.WriteLine("TODO");
+                Console.WriteLine(item.PadLeft(15, ' '));
             }
 
             Console.WriteLine();
