@@ -1,4 +1,5 @@
 using System;
+using System.Globalization;
 
 namespace StringManipulationDemos
 {
@@ -9,11 +10,11 @@ namespace StringManipulationDemos
             Console.Clear();
 
             const string aNumber = "123456";
-            var intNumber = "TODO";
+            var intNumber = Convert.ToInt32(aNumber) ;
             Console.WriteLine($"{aNumber} -> {intNumber}");
-            
-            intNumber = "TODO";
-            Console.WriteLine($"{aNumber} -> {intNumber}");
+
+            intNumber = int.Parse(aNumber);
+            Console.WriteLine($"{aNumber} -> {intNumber * 2}");
 
             var data = new[]
             {
@@ -29,8 +30,20 @@ namespace StringManipulationDemos
             foreach (var item in data)
             {
                 Console.Write($"{item} -> ");
-                intNumber = "TODO";
-                Console.WriteLine(intNumber);
+                try
+                {
+                    intNumber = int.Parse(item);
+                    Console.WriteLine(intNumber);
+                }
+                catch (FormatException ex)
+                {
+                    Console.WriteLine("Input string is not valid for conversion to an integer");
+                }
+                catch(OverflowException) 
+                {
+                    Console.WriteLine("The number is too large for conversion to an integer");
+                }
+               
             }
 
             Console.WriteLine();
@@ -39,7 +52,7 @@ namespace StringManipulationDemos
             foreach (var item in data)
             {
                 Console.Write($"{item} -> ");
-                var result = "TODO";
+                var result = int.TryParse(item, NumberStyles.Any, CultureInfo.CurrentCulture,  out var theNumber) ? $"{theNumber}" : "skipped";
                 Console.WriteLine(result);
             }
 
@@ -49,7 +62,7 @@ namespace StringManipulationDemos
             foreach (var item in data)
             {
                 Console.Write($"{item} -> ");
-                var result = "TODO";
+                var result = double.TryParse(item, out var theNumber) ? $"{theNumber}" : "skipped";
                 Console.WriteLine(result);
             }
 

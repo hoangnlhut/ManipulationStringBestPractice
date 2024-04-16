@@ -1,4 +1,6 @@
 using System;
+using System.Globalization;
+using System.Text.Json.Nodes;
 
 namespace StringManipulationDemos
 {
@@ -20,14 +22,16 @@ namespace StringManipulationDemos
             foreach (var item in data)
             {
                 Console.Write($"{item} -> ");
-                Console.WriteLine("TODO");
+                // parse to enum
+
+                Console.WriteLine(Enum.TryParse(typeof(DayOfWeek), item, true, out var dateOfWeek) ? $"{(DayOfWeek)dateOfWeek}" : "skipped");
             }
             
             // Char
 
             const string aLetterString = "A";
 
-            Console.WriteLine("TODO");
+            Console.WriteLine(char.TryParse(aLetterString, out var charLetter)? $"{charLetter}": "skipped");
 
             Console.WriteLine();
             Console.WriteLine("Press a key to continue");

@@ -1,4 +1,4 @@
-using System;
+ using System;
 using System.Globalization;
 
 namespace StringManipulationDemos
@@ -29,7 +29,7 @@ namespace StringManipulationDemos
                 Console.WriteLine(culture);
                 foreach (var date in data)
                 {
-                    Console.WriteLine("TODO");
+                    Console.WriteLine(DateTime.TryParse(date, culture, DateTimeStyles.AdjustToUniversal, out var result) ? $"{result:F}": "skipped");
                 }
                 Console.WriteLine();
             }
@@ -37,7 +37,7 @@ namespace StringManipulationDemos
             Console.WriteLine("en-US parse exact:");
             foreach (var date in data)
             {
-                Console.WriteLine("TODO");
+                Console.WriteLine(DateTimeOffset.TryParseExact(date, "o", CultureInfo.CurrentCulture, DateTimeStyles.None, out var result) ? $"{result}" : "skipped");
             }
             Console.WriteLine();
 
