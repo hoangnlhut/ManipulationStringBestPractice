@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Globalization;
 
 namespace StringManipulationDemos
 {
@@ -26,12 +27,16 @@ namespace StringManipulationDemos
             Console.WriteLine("Runes:");
 
             counter = 0;
-            // TODO
+            foreach (var rune in input.EnumerateRunes())
+            {
+                counter++;
+                Console.WriteLine(rune);
+            }
             Console.WriteLine($"Total runes: {counter}");
 
             Console.WriteLine();
-            // TODO
-            Console.WriteLine($"Total text elements: {"TODO"}");
+            var stringInfo = new StringInfo(input);
+            Console.WriteLine($"Total text elements: {stringInfo.LengthInTextElements}");
 
             Console.WriteLine();
             Console.WriteLine("Press a key to continue");

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Text;
 
 namespace StringManipulationDemos
 {
@@ -14,18 +15,18 @@ namespace StringManipulationDemos
 
             Console.WriteLine();
 
-            var byteLength = -1; // TODO
+            var byteLength = Encoding.ASCII.GetByteCount( input );
             Console.WriteLine($"String char length: {input.Length}");
             Console.WriteLine($"Bytes required: {byteLength}");
 
             Console.WriteLine();
             var data = new byte[byteLength];
-            // TODO
+            Encoding.ASCII.GetBytes(input, data);
             Console.WriteLine("Encoded bytes:");
             Console.WriteLine(BitConverter.ToString(data));
 
             Console.WriteLine();
-            var decodedString = "TODO";
+            var decodedString = Encoding.ASCII.GetString(data);
             Console.WriteLine($"Decoded string: {decodedString}");
 
             Console.WriteLine();
